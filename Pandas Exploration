@@ -1,0 +1,17 @@
+print("\n\n PART 2 — Pandas Exploration")
+print("-" * 40)
+
+df = pd.read_csv("students.csv")
+
+print(" First 5 rows of the dataset:")
+print(df.head())
+
+print("\n Data types of all columns:")
+print(df.dtypes)
+
+print("\n Total missing values in each column:")
+print(df.isnull().sum())
+
+print("\n Students with attendance below 70%:")
+low_attendance = df[df["attendance"] < 70]
+print(low_attendance[["name", "attendance"]])
